@@ -23,7 +23,7 @@ namespace PracticeEx10
         static double GetValue()
         {
             double nData = Program.ScanDouble();
-            Console.WriteLine("Элемент {0} добавляется в список.\n\n", nData);
+            Console.WriteLine("Элемент {0} добавляется в список.\n", nData);
             return nData;
         }
         public static Point MakeAPoint(double value)
@@ -35,12 +35,16 @@ namespace PracticeEx10
         {
             if (size == 0)
                 return null;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Введите значение 1-го элемента: ");
+            Console.ResetColor();
             Point beg = MakeAPoint(GetValue());
             Point cur = beg;
             for (int i = 1; i < size; i++)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Введите значение {0}-го элемента: ", i + 1);
+                Console.ResetColor();
                 Point nPoint = MakeAPoint(GetValue());
                 cur.next = nPoint;
                 nPoint.prev = cur;
