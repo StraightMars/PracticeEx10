@@ -65,8 +65,7 @@ namespace PracticeEx10
             Point end = beg;
             while (end.next != null)
                 end = end.next;
-            while (cur.next
-                != null)
+            while (cur.next != null)
             {
                 result *= (cur.data + cur.next.data + (2 * end.data));
                 cur = cur.next;
@@ -111,6 +110,7 @@ namespace PracticeEx10
             point.ShowList();
             double result = point.Solving(point);
             Console.WriteLine("\nРезультат вычисления выражения: {0}", result);
+            Console.ReadLine();
         }
     }
 }
